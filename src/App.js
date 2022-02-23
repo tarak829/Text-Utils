@@ -89,7 +89,8 @@ function App() {
   let style = {
     background: darkMode.background,
     color: darkMode.color,
-    height: "110vh",
+    minHeight: "100vh",
+    padding: "0 0 2rem 0",
   };
 
   return (

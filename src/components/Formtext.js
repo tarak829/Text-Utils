@@ -97,7 +97,7 @@ const Formtext = (props) => {
             value={text}
             onChange={HandleChange}
             placeholder={props.Placeholder}
-            rows={10}
+            rows={6}
             style={{
               background: darkObj.taColor,
               color: darkObj.color,
