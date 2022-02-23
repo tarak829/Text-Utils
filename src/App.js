@@ -30,7 +30,7 @@ function App() {
 
   const toggleDarkMode = () => {
     setDarkMode({
-      background: darkMode.background === "white" ? "#00000055" : "white",
+      background: darkMode.background === "white" ? "#1d1f20" : "white",
       taColor: darkMode.taColor === "white" ? "#00000055" : "white",
       color: darkMode.color === "black" ? "white" : "black",
       btnColor:
@@ -84,12 +84,12 @@ function App() {
 
   //change html background color
   document.body.style.backgroundColor =
-    darkMode === "light" ? "white" : "#1d1f20";
+    darkMode.background === "white" ? "white" : "#1d1f20";
 
   let style = {
     background: darkMode.background,
     color: darkMode.color,
-    height: "100vh",
+    height: "110vh",
   };
 
   return (

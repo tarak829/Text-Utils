@@ -76,9 +76,12 @@ export default Component_Navbar;
 
 Component_Navbar.propTypes = {
   title: PropTypes.string,
-  about: PropTypes.string,
-  darkMode: PropTypes.string,
+  darkMode: PropTypes.object,
+  toggleRed: PropTypes.func,
+  toggleGreen: PropTypes.func,
+  toggleBlue: PropTypes.func,
   toggleDarkMode: PropTypes.func,
+  radioAlert: PropTypes.func,
 };
 
 Component_Navbar.defaultProps = {
