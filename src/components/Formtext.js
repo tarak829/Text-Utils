@@ -87,6 +87,13 @@ const Formtext = (props) => {
     btnColor: props.darkMode.btnColor,
   };
 
+  let calcWords = text.split(/\s+/).filter((element)=>{return element.length !==0}).length
+
+  let calcTime = {
+    minutes: Math.floor(calcWords / 200),
+    seconds: Math.floor(calcWords % 200 / 3.34),
+  };
+
   return (
     <Container>
       <Form>
@@ -146,10 +153,10 @@ const Formtext = (props) => {
       </Form>
       <h1>Your text summary</h1>
       <h6>
-        {text.split(/\s+/).filter((element)=>{return element.length !==0}).length} Words and {text.length} Characters
+        {calcWords} Words and {text.length} Characters
       </h6>
       <h6>
-        {(0.005 * text.split(" ").length * 60).toFixed()} Seconds will be
+        {calcTime.minutes} Minutes & {calcTime.seconds} Seconds will be
         required to read the above sentence.{" "}
       </h6>
       <h2>Preview</h2>
